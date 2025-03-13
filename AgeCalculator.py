@@ -38,3 +38,12 @@ class Person:
         """Calculate total days lived"""
         total_days = (self.today - self.birthdate).days
         return f"You have lived for {total_days} days."
+
+# Example usage
+birthdate = input("Enter your birthdate (YYYY-MM-DD, YYYY/MM/DD, YYYY.MM.DD): ")
+try:
+    person = Person(birthdate)
+    print(person.calculate_age())
+    print(person.calculate_total_days())
+except ValueError as e:
+    print(e)
