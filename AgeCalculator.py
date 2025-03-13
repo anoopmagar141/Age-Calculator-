@@ -33,3 +33,8 @@ class Person:
             months += 12
 
         return f"Your age is {years} years, {months} months, and {days} days."
+
+    def calculate_total_days(self):
+        """Calculate total days lived"""
+        total_days = (self.today - self.birthdate).days
+        return f"You have lived for {total_days} days."
